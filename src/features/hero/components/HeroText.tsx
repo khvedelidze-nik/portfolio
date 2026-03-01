@@ -1,13 +1,13 @@
-import KeyWord from "./KeyWord";
+import Accent from "./Accent";
 
 const HeroText = () => {
   return (
     <span className="text-text text-2xl font-bold">
-      Nikoloz Khvedelidze <br /> <KeyWord>Frontend Developer (React)</KeyWord>
+      Nikoloz Khvedelidze <br /> <Accent>Frontend Developer (React)</Accent>
       <br />
-      <br />I build <KeyWord>responsive</KeyWord>, <KeyWord>scalable</KeyWord>{" "}
-      web applications using <KeyWord>React</KeyWord>, <br />
-      <KeyWord>TypeScript</KeyWord>, and modern frontend tooling.
+      <br />I build <Accent>responsive</Accent>, <Accent>scalable</Accent> web
+      applications using <Accent>React</Accent>, <br />
+      <Accent>TypeScript</Accent>, and modern frontend tooling.
     </span>
   );
 };
