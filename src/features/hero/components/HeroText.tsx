@@ -1,6 +1,6 @@
 import KeyWord from "./KeyWord";
 
-const About = () => {
+const HeroText = () => {
   return (
     <span className="text-text text-2xl font-bold">
       Nikoloz Khvedelidze <br /> <KeyWord>Frontend Developer (React)</KeyWord>
@@ -12,4 +12,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default HeroText;

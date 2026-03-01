@@ -9,7 +9,7 @@ const NavBtn = ({ title, path }: NavBtnProps) => {
   return (
     <NavLink
       className={({ isActive }) =>
-        "text-bold border-border rounded-lg border-b px-1 " +
+        "text-bold border-border border-b px-1 " +
         (isActive
           ? "text-accent font-semibold"
           : "text-navInactive hover:text-text")
