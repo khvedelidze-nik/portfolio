@@ -4,11 +4,13 @@
   --color-hero: hsl(222, 39%, 11%);
   --color-section-a: hsl(222, 39%, 7%);
   --color-section-b: hsl(222, 39%, 9%);
+  --color-card: hsl(222, 39%, 10%);
+  --color-cardHover: hsl(222, 39%, 8%);
   --color-text: hsl(220, 13%, 91%);
-  --color-muted: hsl(217.89, 10.61%, 64.9%);
-  --color-accent: hsl(188, 85.71%, 53.33%);
-  --color-accentHover: hsl(188, 94.5%, 42.75%);
-  --color-navInactive: hsl(217.89, 10.61%, 64.9%);
+  --color-muted: hsl(218, 10%, 65%);
+  --color-accent: hsl(188, 86%, 53%);
+  --color-accentHover: hsl(188, 94.5%, 43%);
+  --color-navInactive: hsl(218, 10%, 65%);
   --color-border: hsl(210, 24.39%, 16.08%);
 }
 body {

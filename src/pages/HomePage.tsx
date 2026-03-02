@@ -8,7 +8,7 @@ import Contact from "../features/contact/Contact";
 
 const HomePage: React.FC = () => {
   return (
-    <div>
+    <div className="select-none">
       <Hero />
       <Projects />
       <Skills />
