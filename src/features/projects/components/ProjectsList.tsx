@@ -3,9 +3,13 @@ import ProjectCard from "./ProjectCard";
 
 const ProjectsList = () => {
   return (
-    <div className="flex flex-row flex-wrap justify-center px-2 sm:justify-start">
-      {projects.map((p) => (
-        <ProjectCard name={p.name} description={p.description} />
+    <div className="flex flex-col flex-wrap justify-start gap-2 px-2 sm:flex-row">
+      {projects.map((data) => (
+        <ProjectCard
+          key={data.id}
+          name={data.name}
+          description={data.description}
+        />
       ))}
     </div>
   );

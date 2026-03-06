@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { useEffect, useRef, useState } from "react";
 
 interface NavBtnProps {
   title: string;
@@ -6,18 +6,48 @@ interface NavBtnProps {
 }
 
 const NavBtn = ({ title, path }: NavBtnProps) => {
+  const [isActive, setIsActive] = useState(false);
+  const buttonRef = useRef<HTMLButtonElement>(null);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const section = document.getElementById(path);
+      if (!section) return;
+
+      const sectionTop = section.offsetTop;
+      const sectionHeight = section.offsetHeight;
+      const scrollPosition = window.scrollY + 36;
+
+      const active =
+        scrollPosition >= sectionTop &&
+        scrollPosition < sectionTop + sectionHeight;
+
+      setIsActive(active);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    handleScroll();
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [path]);
+  const handleClick = () => {
+    const section = document.getElementById(path);
+    if (section) {
+      scrollTo({ top: section.offsetTop - 36 });
+    }
+  };
   return (
-    <NavLink
-      className={({ isActive }) =>
-        "text-bold border-border border-b px-1 " +
-        (isActive
-          ? "text-accent font-semibold"
-          : "text-navInactive hover:text-text")
-      }
-      to={path}
-    >
-      {title}
-    </NavLink>
+    <>
+      <button
+        onClick={handleClick}
+        ref={buttonRef}
+        className={`border-border sm:text-md border-b px-1 text-sm font-semibold ${isActive ? "text-accent" : "text-navInactive hover:text-text"} `}
+      >
+        {title}
+      </button>
+    </>
   );
 };
 
