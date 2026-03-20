@@ -4,13 +4,13 @@ import SkillItem from "./SkillItem";
 
 const SkillsList = () => {
   return (
-    <div className="flex flex-col flex-wrap gap-8 px-4 sm:flex-row">
+    <div className="flex flex-col flex-wrap gap-8 px-1 sm:flex-row">
       {skills.map((data, i) => (
-        <SkillCategory key={"category-" + i}>
+        <SkillCategory key={"skill-category-" + i}>
           {data.category}
 
-          {data.items.map((skill, i) => (
-            <SkillItem key={"skill-" + i}>{skill}</SkillItem>
+          {data.items.map((skill) => (
+            <SkillItem key={"skill-" + skill}>{skill}</SkillItem>
           ))}
         </SkillCategory>
       ))}
