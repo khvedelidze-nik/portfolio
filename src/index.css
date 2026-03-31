@@ -13,6 +13,7 @@
   --color-accentHover: hsl(188, 94.5%, 43%);
   --color-navInactive: hsl(218, 10%, 65%);
   --color-border: hsl(210, 24.39%, 16.08%);
+  --color-error: hsl(0, 80%, 55%);
 }
 body {
   margin: 0;

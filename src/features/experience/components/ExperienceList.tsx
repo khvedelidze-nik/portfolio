@@ -4,7 +4,7 @@ import ExperienceItem from "./ExperienceItem";
 
 const ExperienceList = () => {
   return (
-    <div className="flex flex-col flex-wrap gap-8 px-1 sm:flex-row">
+    <div className="mt-4 flex flex-col flex-wrap gap-4 px-1 sm:flex-row sm:gap-8">
       {experiences.map((data, i) => (
         <ExperienceCategory key={"experience-category-" + i}>
           {data.category}

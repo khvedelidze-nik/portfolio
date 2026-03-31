@@ -1,10 +1,10 @@
 const ExperienceHeader = () => {
   return (
     <div className="text-text px-1 md:text-base">
-      <p className="text-accent font-semibold md:text-lg">
+      <p className="text-accent text-xl font-semibold sm:text-2xl">
         Frontend Developer — Personal Projects
       </p>
-      <span>2025 – Present</span>
+      <span className="text-sm">2025 – Present</span>
       <ul className="list-inside list-disc px-1 font-thin">
         <li>Developed multiple React applications using TypeScript</li>
         <li>Built reusable component-based architectures</li>
