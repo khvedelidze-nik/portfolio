@@ -35,7 +35,7 @@ const NavBtn = ({ title, path }: NavBtnProps) => {
   const handleClick = () => {
     const section = document.getElementById(path);
     if (section) {
-      scrollTo({ top: section.offsetTop - 36 });
+      scrollTo({ top: section.offsetTop - 36, behavior: "smooth" });
     }
   };
   return (
@@ -43,7 +43,7 @@ const NavBtn = ({ title, path }: NavBtnProps) => {
       <button
         onClick={handleClick}
         ref={buttonRef}
-        className={`border-border sm:text-md border-b px-1 text-sm font-semibold ${isActive ? "text-accent" : "text-navInactive hover:text-text"} `}
+        className={`border-border sm:text-md border-b px-1 text-sm font-semibold duration-100 ease-in hover:-translate-y-0.5 ${isActive ? "text-accent" : "text-navInactive hover:text-text"} `}
       >
         {title}
       </button>

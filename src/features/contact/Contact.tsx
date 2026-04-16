@@ -3,10 +3,10 @@ import ContactLinks from "./components/ContactLinks";
 
 const Contact = () => {
   return (
-    <div className="bg-section-a min-h-40 max-w-full p-4" id="contact">
+    <section className="bg-section-a min-h-40 max-w-full p-4 pb-8" id="contact">
       <span className="text-text text-2xl font-bold sm:text-3xl">Contact</span>
       <ContactLinks />
-    </div>
+    </section>
   );
 };
 

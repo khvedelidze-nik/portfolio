@@ -1,6 +1,6 @@
 export const contact = [
   {
-    name: "Phone",
+    name: "WhatsApp",
     value: "+995 558 712 242",
     link: "tel: +995555123456",
     icon: "/icons/whatsapp.png",

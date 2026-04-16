@@ -1,20 +1,22 @@
 import LinkIcon from "./LinkIcon";
 
 interface BtnProps {
-  name: string;
-  href: string;
+  path: string;
   icon: string;
+  name: string;
+  children: React.ReactNode;
 }
 
-const LinkBtn = ({ name, href, icon }: BtnProps) => {
+const LinkBtn = ({ path, icon, name, children }: BtnProps) => {
   return (
     <a
-      href={href}
+      href={path}
       target="_blank"
-      className="text-accent hover:text-accentHover font-base flex w-fit gap-2 p-1"
+      title={name}
+      className="text-accent font-base flex w-fit gap-2 p-1 hover:brightness-90"
     >
       <LinkIcon src={icon} />
-      {name}
+      {children}
     </a>
   );
 };

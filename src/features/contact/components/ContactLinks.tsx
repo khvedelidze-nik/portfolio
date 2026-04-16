@@ -5,7 +5,14 @@ const ContactLinks = () => {
   return (
     <div className="grid grid-flow-row grid-cols-1 gap-2 p-1 sm:grid-cols-2">
       {contact.map((data) => (
-        <LinkBtn href={data.link} name={data.value} icon={data.icon} />
+        <LinkBtn
+          key={data.name}
+          path={data.link}
+          icon={data.icon}
+          name={data.name}
+        >
+          {data.value}
+        </LinkBtn>
       ))}
     </div>
   );

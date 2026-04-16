@@ -3,8 +3,8 @@ export const projects = [
     id: 1,
     name: "Craft Coffee Shop",
     description:
-      "Coffee Shop website that lets users craft their coffee how they like it",
-    image: "/project-preview/project5.png",
+      "Responsive coffee shop website where users can explore products and customize their orders through a clean, modern interface built with reusable frontend components.",
+    image: "",
     tech: [],
     features: [],
     links: { demo: "", github: "" },
@@ -12,17 +12,19 @@ export const projects = [
   {
     id: 2,
     name: "Pet Shop",
-    description: "Pet Shop website that allows users to buy any pet they like.",
-    image: "/project-preview/project5.png",
+    description:
+      "Developed a responsive pet shop interface with product browsing, structured layouts, and scalable component-based architecture for an e-commerce style experience.",
+    image: "",
     tech: [],
     features: [],
-    links: { demo: "", github: "" },
+    links: { demo: "", github: "https://github.com/khvedelidze-nik/pet-shop" },
   },
   {
     id: 3,
     name: "Delivery Website",
-    description: "Website for delivery service.",
-    image: "/project-preview/project5.png",
+    description:
+      "Created a delivery service website with responsive design, clear content hierarchy, and reusable frontend components for a smooth browsing experience.",
+    image: "",
     tech: [],
     features: [],
     links: { demo: "", github: "" },
@@ -31,8 +33,8 @@ export const projects = [
     id: 4,
     name: "Trip Planner App",
     description:
-      "App that allows users to plan their trip in different countries.",
-    image: "/project-preview/project5.png",
+      "Built a trip planning application that helps users explore countries and organize travel ideas using dynamic data rendering and intuitive UI patterns.",
+    image: "/project-preview/plan-a-trip-project.png",
     tech: [],
     features: [],
     links: { demo: "", github: "" },
@@ -40,7 +42,8 @@ export const projects = [
   {
     id: 5,
     name: "Pictures App",
-    description: "Search and download the photos of your choice.",
+    description:
+      "Developed a photo search app using external API integration, enabling users to search, view, and download images in a responsive gallery layout.",
     image: "/project-preview/project5.png",
     tech: [],
     features: [],
