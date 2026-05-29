@@ -8,6 +8,11 @@ const HeroText = () => {
       <br />I build <Accent>responsive</Accent>, <Accent>scalable</Accent> web
       applications using <Accent>React</Accent>, <Accent>TypeScript</Accent>,
       and modern frontend tooling.
+      <br /> <br />
+      <hr />
+      <span className="text-accent text-base">
+        This portfolio is a work in progress. Stay tuned for updates!
+      </span>
     </span>
   );
 };
