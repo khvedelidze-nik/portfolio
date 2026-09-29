@@ -11,10 +11,11 @@ const ExperienceList = () => {
 
           {data.items.map((item) => (
             <ExperienceItem
-              key={"experience-" + item.name}
+              key={"experience-" + item.id}
               from={item.from}
               name={item.name}
               achievements={item.achievements}
+              date={item.date}
             />
           ))}
         </ExperienceCategory>

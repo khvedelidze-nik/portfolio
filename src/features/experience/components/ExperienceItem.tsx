@@ -4,9 +4,10 @@ interface ItemProps {
   from: string;
   name: string;
   achievements: string[];
+  date: string;
 }
 
-const ExperienceItem = ({ from, name, achievements }: ItemProps) => {
+const ExperienceItem = ({ from, name, achievements, date }: ItemProps) => {
   return (
     <li className="text-text px-1 text-sm font-normal md:text-base lg:text-lg">
       <span className="font-mono">{from}</span> - {name}
@@ -17,6 +18,7 @@ const ExperienceItem = ({ from, name, achievements }: ItemProps) => {
           ))}
         </ul>
       )}
+      {date && <span className="text-muted pl-3 text-sm italic">{date}</span>}
     </li>
   );
 };

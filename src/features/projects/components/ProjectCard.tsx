@@ -22,6 +22,14 @@ const ProjectCard = ({ data }: CardProps) => {
         {data.description && (
           <span className="text-text text-base">{data.description}</span>
         )}
+        {data.tech && (
+          <p className="text-accent text-lg font-bold">
+            Used Tech: <br />{" "}
+            {data.tech.map((t) => (
+              <p className="text-text text-sm font-medium">{t}</p>
+            ))}
+          </p>
+        )}
       </div>
       <div className="flex gap-2">
         <LinkBtn path={data.links.github}>GitHub</LinkBtn>

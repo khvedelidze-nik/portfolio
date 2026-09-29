@@ -1,7 +1,7 @@
 export const skills = [
   {
     category: "Core",
-    items: ["React", "JavaScript(ES6+)", "TypeScript"],
+    items: ["HTML", "CSS", "React", "JavaScript(ES6+)", "TypeScript"],
   },
   {
     category: "Styling",
