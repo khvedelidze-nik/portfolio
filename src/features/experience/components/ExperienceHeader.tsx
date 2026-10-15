@@ -1,19 +1,34 @@
 const ExperienceHeader = () => {
   return (
-    <div className="text-text px-1 md:text-base">
-      <p className="text-accent text-xl font-semibold sm:text-2xl">
+    <div className="animate-slide-up mb-8 p-6 bg-card border border-border rounded-xl" role="region" aria-label="Current focus">
+      <h3 className="text-accent text-xl font-semibold sm:text-2xl mb-4">
         Frontend Developer — Personal Projects
-      </p>
-      <ul className="list-inside list-disc px-1 font-thin">
-        <li>Developed multiple React applications using TypeScript</li>
-        <li>Built reusable component-based architectures</li>
-        <li>Integrated REST APIs and handled async data</li>
-        <li>Implemented responsive design using Tailwind CSS</li>
-        <li>Focused on performance and clean code practices</li>
+      </h3>
+      <ul className="space-y-2 text-text/90" role="list" aria-label="Current focus highlights">
+        <li className="flex items-start gap-2">
+          <span className="text-accent mt-1 shrink-0" aria-hidden="true">▸</span>
+          Developed multiple React applications using TypeScript
+        </li>
+        <li className="flex items-start gap-2">
+          <span className="text-accent mt-1 shrink-0" aria-hidden="true">▸</span>
+          Built reusable component-based architectures
+        </li>
+        <li className="flex items-start gap-2">
+          <span className="text-accent mt-1 shrink-0" aria-hidden="true">▸</span>
+          Integrated REST APIs and handled async data
+        </li>
+        <li className="flex items-start gap-2">
+          <span className="text-accent mt-1 shrink-0" aria-hidden="true">▸</span>
+          Implemented responsive design using Tailwind CSS
+        </li>
+        <li className="flex items-start gap-2">
+          <span className="text-accent mt-1 shrink-0" aria-hidden="true">▸</span>
+          Focused on performance and clean code practices
+        </li>
       </ul>
-      <span className="text-muted pl-3 text-sm italic">
+      <time className="text-muted text-sm italic block mt-4" dateTime="2025-04">
         Apr. 2025 - Present
-      </span>
+      </time>
     </div>
   );
 };

@@ -2,7 +2,7 @@ export const contact = [
   {
     name: "WhatsApp",
     value: "+995 558 712 242",
-    link: "tel: +995555123456",
+    link: "https://wa.me/995558712242",
     icon: "/icons/whatsapp.png",
   },
   {
@@ -14,7 +14,7 @@ export const contact = [
   {
     name: "Email",
     value: "khvedelidze.nik@gmail.com",
-    link: "mailto: khvedelidze.nik@gmail.com",
+    link: "mailto:khvedelidze.nik@gmail.com",
     icon: "/icons/google_mail.png",
   },
   {
@@ -26,7 +26,7 @@ export const contact = [
   {
     name: "GitHub",
     value: "khvedelidze-nik",
-    link: "https://www.github.com/khvedelidze-nik/",
+    link: "https://github.com/khvedelidze-nik",
     icon: "/icons/github_black.png",
   },
 ];

@@ -1,13 +1,25 @@
 import { links } from "../data/links";
-import LinkBtn from "./LinkBtn";
+import LinkBtn from "@/components/ui/LinkBtn";
 
 const HeroLinks = () => {
   return (
-    <div className="flex gap-2">
+    <nav
+      className="flex flex-wrap gap-3 animate-slide-up delay-3"
+      aria-label="Social links"
+    >
       {links.map((data) => (
-        <LinkBtn href={data.url} name={data.name} icon={data.icon} />
+        <LinkBtn
+          key={data.name}
+          href={data.url}
+          icon={data.icon}
+          iconAlt={data.name}
+          variant="primary"
+          className="whitespace-nowrap"
+        >
+          {data.name}
+        </LinkBtn>
       ))}
-    </div>
+    </nav>
   );
 };
 

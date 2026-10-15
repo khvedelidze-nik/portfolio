@@ -4,11 +4,14 @@ import HeroText from "./components/HeroText";
 const Hero = () => {
   return (
     <section
-      className="bg-hero grid min-h-40 max-w-full gap-10 p-4 pt-20"
+      className="bg-hero min-h-[calc(100dvh-80px)] flex items-center px-4 pt-20"
       id="hero"
+      aria-labelledby="hero-heading"
     >
-      <HeroText />
-      <HeroLinks />
+      <div className="w-full max-w-4xl mx-auto animate-fade-in">
+        <HeroText />
+        <HeroLinks />
+      </div>
     </section>
   );
 };

@@ -3,9 +3,14 @@ import Navbar from "../features/navbar/Navbar";
 
 const AppLayout = () => {
   return (
-    <div className="bg-bg relative h-lvh">
+    <div className="bg-bg relative min-h-screen">
+      <a href="#main-content" className="skip-link">
+        Skip to main content
+      </a>
       <Navbar />
-      <Outlet />
+      <main id="main-content" className="pt-12">
+        <Outlet />
+      </main>
     </div>
   );
 };

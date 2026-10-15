@@ -4,20 +4,28 @@ import ExperienceItem from "./ExperienceItem";
 
 const ExperienceList = () => {
   return (
-    <div className="mt-4 flex flex-col flex-wrap gap-4 px-1 sm:flex-row sm:gap-8">
+    <div
+      className="grid gap-8
+        grid-cols-1
+        lg:grid-cols-2"
+      role="list"
+      aria-label="Experience categories"
+    >
       {experiences.map((data, i) => (
-        <ExperienceCategory key={"experience-category-" + i}>
+        <ExperienceCategory key={"experience-category-" + i} index={i}>
           {data.category}
 
-          {data.items.map((item) => (
-            <ExperienceItem
-              key={"experience-" + item.id}
-              from={item.from}
-              name={item.name}
-              achievements={item.achievements}
-              date={item.date}
-            />
-          ))}
+          <ul className="mt-4 space-y-4" role="list" aria-label={`${data.category} items`}>
+            {data.items.map((item) => (
+              <ExperienceItem
+                key={"experience-" + item.id}
+                from={item.from}
+                name={item.name}
+                achievements={item.achievements}
+                date={item.date}
+              />
+            ))}
+          </ul>
         </ExperienceCategory>
       ))}
     </div>

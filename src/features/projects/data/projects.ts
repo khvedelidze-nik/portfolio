@@ -4,7 +4,7 @@ export const projects = [
     name: "Craft Coffee Shop",
     description:
       "Responsive coffee shop website where users can explore products and customize their orders through a clean, modern interface built with reusable frontend components.",
-    image: "",
+    image: "/project-preview/craft-coffee-shop.png",
     tech: [
       "React",
       "JavaScript",
@@ -20,7 +20,7 @@ export const projects = [
     name: "Pet Shop",
     description:
       "Developed a responsive pet shop interface with product browsing, structured layouts, and scalable component-based architecture for an e-commerce style experience.",
-    image: "",
+    image: "/project-preview/pet-shop.png",
     tech: [
       "React",
       "TypeScript",
@@ -36,7 +36,7 @@ export const projects = [
     name: "Delivery Website",
     description:
       "Created a delivery service website with responsive design, clear content hierarchy, and reusable frontend components for a smooth browsing experience.",
-    image: "",
+    image: "/project-preview/delivery-project.png",
     tech: ["React", "TypeScript", "React Router", "Redux", "Material UI"],
     features: [],
     links: { demo: "", github: "" },

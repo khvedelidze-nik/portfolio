@@ -9,7 +9,7 @@ export const skills = [
       "CSS3",
       "CSS Modules",
       "Styled Components",
-      "Materal UI",
+      "Material UI",
       "Tailwind CSS",
       "Responsive Design",
     ],

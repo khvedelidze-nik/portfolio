@@ -1,29 +1,29 @@
-import { useEffect, useState } from "react";
 import { skills } from "../data/skills";
 import SkillCategory from "./SkillCategory";
 import SkillItem from "./SkillItem";
-import type { SkillsInterface } from "../interfaces/SkillsInterface";
 
 const SkillsList = () => {
-  const [skillsData, setSkillsData] = useState<SkillsInterface[]>();
-
-  useEffect(() => {
-    const data = skills;
-    setSkillsData(data);
-  }, []);
-
   return (
-    <div className="flex flex-col flex-wrap justify-between gap-8 px-1 sm:grid sm:grid-cols-2 md:grid-cols-4">
-      {skillsData &&
-        skillsData.map((data, i) => (
-          <SkillCategory key={"skill-category-" + i}>
-            {data.category}
+    <div
+      className="grid gap-8
+        grid-cols-1
+        sm:grid-cols-2
+        lg:grid-cols-3
+        xl:grid-cols-4"
+      role="list"
+      aria-label="Skill categories"
+    >
+      {skills.map((data, i) => (
+        <SkillCategory key={"skill-category-" + i} index={i}>
+          {data.category}
 
+          <ul className="mt-4 space-y-2" role="list" aria-label={`${data.category} skills`}>
             {data.items.map((skill) => (
               <SkillItem key={"skill-" + skill}>{skill}</SkillItem>
             ))}
-          </SkillCategory>
-        ))}
+          </ul>
+        </SkillCategory>
+      ))}
     </div>
   );
 };

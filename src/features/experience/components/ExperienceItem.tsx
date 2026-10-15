@@ -9,16 +9,24 @@ interface ItemProps {
 
 const ExperienceItem = ({ from, name, achievements, date }: ItemProps) => {
   return (
-    <li className="text-text px-1 text-sm font-normal md:text-base lg:text-lg">
-      <span className="font-mono">{from}</span> - {name}
-      {achievements && (
-        <ul className="list-inside list-disc px-1 text-base">
+    <li className="relative pl-6 border-l border-border/50 ml-2">
+      <div className="absolute -left-1.5 top-1 w-3 h-3 rounded-full bg-accent border-2 border-bg" aria-hidden="true" />
+      <div className="mb-1">
+        <span className="font-mono text-accent text-sm font-medium">{from}</span>
+        <span className="text-text ml-2 font-medium">{name}</span>
+      </div>
+      {achievements && achievements.length > 0 && (
+        <ul className="mt-3 space-y-2 pl-2" role="list" aria-label="Achievements">
           {achievements.map((achievement, i) => (
             <ExperienceAchievement key={i}>{achievement}</ExperienceAchievement>
           ))}
         </ul>
       )}
-      {date && <span className="text-muted pl-3 text-sm italic">{date}</span>}
+      {date && (
+        <time className="text-muted text-sm italic block mt-3" dateTime={date}>
+          {date}
+        </time>
+      )}
     </li>
   );
 };

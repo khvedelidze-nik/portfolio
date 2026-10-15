@@ -1,53 +1,78 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, useCallback } from "react";
 
 interface NavBtnProps {
   title: string;
   path: string;
+  onClick?: () => void;
+  className?: string;
 }
 
-const NavBtn = ({ title, path }: NavBtnProps) => {
+const NavBtn = ({ title, path, onClick, className = "" }: NavBtnProps) => {
   const [isActive, setIsActive] = useState(false);
   const buttonRef = useRef<HTMLButtonElement>(null);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const section = document.getElementById(path);
-      if (!section) return;
+  const handleScroll = useCallback(() => {
+    const section = document.getElementById(path);
+    if (!section) return;
 
-      const sectionTop = section.offsetTop;
-      const sectionHeight = section.offsetHeight;
-      const scrollPosition = window.scrollY + 36;
+    const sectionTop = section.offsetTop;
+    const sectionHeight = section.offsetHeight;
+    // Account for fixed header height
+    const headerOffset = 80;
+    const scrollPosition = window.scrollY + headerOffset;
 
-      const active =
-        scrollPosition >= sectionTop &&
-        scrollPosition < sectionTop + sectionHeight;
+    const active =
+      scrollPosition >= sectionTop &&
+      scrollPosition < sectionTop + sectionHeight;
 
-      setIsActive(active);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    handleScroll();
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
+    setIsActive(active);
   }, [path]);
+
+  useEffect(() => {
+    handleScroll();
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [handleScroll]);
+
   const handleClick = () => {
     const section = document.getElementById(path);
     if (section) {
-      scrollTo({ top: section.offsetTop - 36, behavior: "smooth" });
+      const headerOffset = 80;
+      const targetPosition = section.offsetTop - headerOffset;
+      window.scrollTo({ top: targetPosition, behavior: "smooth" });
+    }
+    onClick?.();
+  };
+
+  const handleKeyDown = (e: React.KeyboardEvent) => {
+    if (e.key === "Enter" || e.key === " ") {
+      e.preventDefault();
+      handleClick();
     }
   };
+
   return (
-    <>
-      <button
-        onClick={handleClick}
-        ref={buttonRef}
-        className={`border-border sm:text-md border-b px-1 text-sm font-semibold duration-100 ease-in hover:-translate-y-0.5 ${isActive ? "text-accent" : "text-navInactive hover:text-text"} `}
-      >
-        {title}
-      </button>
-    </>
+    <button
+      onClick={handleClick}
+      onKeyDown={handleKeyDown}
+      ref={buttonRef}
+      className={`
+        relative px-3 py-1.5 text-sm font-medium rounded-lg transition-all duration-200
+        focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-bg
+        ${isActive ? "text-accent" : "text-navInactive hover:text-text hover:bg-cardHover"}
+        ${className}
+      `}
+      aria-current={isActive ? "page" : undefined}
+      aria-label={isActive ? `${title}, current section` : `Go to ${title} section`}
+    >
+      {title}
+      {isActive && (
+        <span
+          className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 w-1.5 h-1.5 rounded-full bg-accent"
+          aria-hidden="true"
+        />
+      )}
+    </button>
   );
 };
 
