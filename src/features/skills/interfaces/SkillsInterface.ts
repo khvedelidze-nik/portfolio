@@ -1,4 +1,4 @@
 export interface SkillsInterface {
   category: string;
-  items: string[];
+  items: { title: string; description: string };
 }

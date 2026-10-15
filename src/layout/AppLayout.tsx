@@ -8,7 +8,7 @@ const AppLayout = () => {
         Skip to main content
       </a>
       <Navbar />
-      <main id="main-content" className="pt-12">
+      <main id="main-content" className="pt-14">
         <Outlet />
       </main>
     </div>

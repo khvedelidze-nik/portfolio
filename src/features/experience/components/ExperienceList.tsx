@@ -5,9 +5,7 @@ import ExperienceItem from "./ExperienceItem";
 const ExperienceList = () => {
   return (
     <div
-      className="grid gap-8
-        grid-cols-1
-        lg:grid-cols-2"
+      className="grid grid-cols-1 gap-12 lg:grid-cols-2"
       role="list"
       aria-label="Experience categories"
     >
@@ -15,7 +13,11 @@ const ExperienceList = () => {
         <ExperienceCategory key={"experience-category-" + i} index={i}>
           {data.category}
 
-          <ul className="mt-4 space-y-4" role="list" aria-label={`${data.category} items`}>
+          <ul
+            className="mt-4 space-y-4"
+            role="list"
+            aria-label={`${data.category} items`}
+          >
             {data.items.map((item) => (
               <ExperienceItem
                 key={"experience-" + item.id}

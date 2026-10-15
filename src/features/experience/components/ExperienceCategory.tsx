@@ -8,7 +8,7 @@ interface ExperienceCategoryProps {
 const ExperienceCategory = ({ children, index }: ExperienceCategoryProps) => {
   return (
     <li
-      className="animate-slide-up p-6 bg-card border border-border rounded-xl transition-all duration-300 hover:border-accent/30 hover:shadow-lg"
+      className="animate-slide-up p-8 bg-card/90 border border-border rounded-xl transition-all duration-300 hover:border-accent/30 hover:shadow-lg flex flex-col justify-center items-center"
       style={{ animationDelay: `${Math.min(index * 150, 600)}ms` }}
       role="listitem"
     >

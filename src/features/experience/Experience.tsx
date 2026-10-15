@@ -4,7 +4,7 @@ import ExperienceList from "./components/ExperienceList";
 const Experience = () => {
   return (
     <section
-      className="bg-section-b py-16 px-4 sm:py-20 sm:px-6 lg:px-8"
+      className="bg-section-b py-20 px-6 sm:py-24 sm:px-8 lg:px-12"
       id="experience"
       aria-labelledby="experience-heading"
     >
@@ -12,7 +12,7 @@ const Experience = () => {
         <header className="mb-10 animate-fade-in">
           <h2
             id="experience-heading"
-            className="text-text text-3xl font-bold sm:text-4xl lg:text-5xl tracking-tight"
+            className="text-accent text-4xl md:text-5xl relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-accent after:transition-all after:duration-300 hover:after:w-full"
           >
             Experience
           </h2>

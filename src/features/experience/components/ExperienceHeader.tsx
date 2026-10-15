@@ -1,6 +1,6 @@
 const ExperienceHeader = () => {
   return (
-    <div className="animate-slide-up mb-8 p-6 bg-card border border-border rounded-xl" role="region" aria-label="Current focus">
+    <div className="animate-slide-up mb-8 rounded-xl p-8 bg-card/90 border border-border hover:shadow-xl transition-shadow duration-200" role="region" aria-label="Current focus">
       <h3 className="text-accent text-xl font-semibold sm:text-2xl mb-4">
         Frontend Developer — Personal Projects
       </h3>
